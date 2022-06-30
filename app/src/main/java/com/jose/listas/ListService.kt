@@ -18,12 +18,7 @@ class ListService(context: Context) {
             file.createNewFile()
         }
 
-        list = mutableListOf<String>()
-        file.useLines {
-            Log.d("Debug", "it: " + it)
-            list.add(it.toString())
-        }
-        Log.d("Listas", "filesDir: " + context.filesDir)
+        list = file.readLines() as MutableList<String>
         return list
     }
 
