@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.jose.listas.MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainer"
+    <fragment
+        android:id="@+id/loginFormFragment"
         android:name="com.jose.listas.LoginFormFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
