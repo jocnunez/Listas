@@ -17,18 +17,27 @@ class ListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list)
         Log.d("Debug", "List Activity Open")
 
+        val listService = ListService(this)
+        list = listService.getListFromFile()
+        list.forEach {
+            addItemToLayout(it)
+        }
+
         val newItem = findViewById<Button>(R.id.newButton)
         newItem.setOnClickListener {
-            addNewItem()
+            addNewItem(listService)
         }
     }
 
-    private fun addNewItem() {
+    private fun addNewItem(service: ListService) {
         val randomText = Date().toString()
-        list.add(randomText)
+        service.addItemToList(randomText)
+        addItemToLayout(randomText)
+    }
 
+    private fun addItemToLayout(text: String) {
         val textView = TextView(this)
-        textView.text = randomText
+        textView.text = text
 
         val listLayout = findViewById<LinearLayout>(R.id.listLayout)
         listLayout.addView(textView)
