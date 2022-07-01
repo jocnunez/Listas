@@ -23,10 +23,10 @@ class ListActivity : AppCompatActivity() {
             addItemToLayout(it)
         }
 
-        val newItem = findViewById<Button>(R.id.newButton)
+/*        val newItem = findViewById<Button>(R.id.newButton)
         newItem.setOnClickListener {
             addNewItem(listService)
-        }
+        }*/
     }
 
     private fun addNewItem(service: ListService) {
