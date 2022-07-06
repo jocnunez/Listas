@@ -28,7 +28,8 @@ class ItemDetailFragment : Fragment() {
 
         return view
     }
-    fun cancelButtonHandler(view: View) {
+
+    private fun cancelButtonHandler(view: View) {
         val title = view.findViewById<TextInputEditText>(R.id.titleField)
         val description = view.findViewById<TextInputEditText>(R.id.descriptionField)
 
@@ -36,11 +37,11 @@ class ItemDetailFragment : Fragment() {
         description.setText("")
     }
 
-    fun deleteButtonHandler(view: View) {
+    private fun deleteButtonHandler(view: View) {
         Log.d("ItemDetail", "Click on Delete Button: ")
     }
 
-    fun saveButtonHandler(view: View) {
+    private fun saveButtonHandler(view: View) {
         Log.d("ItemDetail", "Click on Save Button")
     }
 }

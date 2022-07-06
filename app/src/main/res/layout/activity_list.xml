@@ -11,33 +11,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/itemDetail"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@+id/detailLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!--        <Button
+        <Button
             android:id="@+id/newButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Item"
+            android:text="@string/new_item"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/listLayout" />
--->
 
     </LinearLayout>
 
-    <fragment
-        android:id="@+id/itemDetail"
-        android:name="com.jose.listas.ItemDetailFragment"
+    <FrameLayout
+        android:id="@+id/detailLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </fragment>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
